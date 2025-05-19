@@ -44,4 +44,32 @@ const bookStore = {
 }
 
 // Write your code here!
+// Select and update the bookstore title
+const bookStoreTitle = document.querySelector("#header"); // Target the title
+bookStoreTitle.textContent = bookStore.name; // Replace the name
+
+// Remove the example placeholder book
+const placeholder = document.querySelector("#delete-this");
+if (placeholder) {
+    placeholder.remove();
+}
+
+// Select the book list container
+
+
+// Loop through the books and create DOM elements
+
+    // Create the container for each book
+
+    // Create and set the title
+
+    // Crate and set the author
+
+    // Create and set the image
+
+    // append the elements to the book container
+
+    // append the book container to the list
+
+
 
