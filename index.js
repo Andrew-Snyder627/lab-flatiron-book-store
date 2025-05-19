@@ -41,7 +41,7 @@ const bookStore = {
             
         }
     ]
-}
+};
 
 // Write your code here!
 // Select and update the bookstore title
@@ -55,21 +55,30 @@ if (placeholder) {
 }
 
 // Select the book list container
-
+const bookList = document.querySelector("#book-list");
 
 // Loop through the books and create DOM elements
-
+bookStore.books.forEach(book => {
     // Create the container for each book
-
+    const bookContainer = document.createElement("li");
     // Create and set the title
-
+    const bookTitle = document.createElement("h3");
+    bookTitle.textContent = book.title;
     // Crate and set the author
-
+    const bookAuthor = document.createElement("p");
+    bookAuthor.textContent = `Author: ${book.author}`;
     // Create and set the image
-
+    const bookImage = document.createElement("img");
+    bookImage.src = book.imageUrl;
+    bookImage.alt = book.title;
     // append the elements to the book container
-
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(bookAuthor);
+    bookContainer.appendChild(bookImage);
     // append the book container to the list
+    bookList.appendChild(bookContainer);
+});
+
 
 
 
